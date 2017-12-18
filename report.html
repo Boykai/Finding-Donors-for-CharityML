@@ -15050,6 +15050,7 @@ Look at the graph at the bottom left from the cell above(the visualization creat
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer: </strong></p>
 <p>The Ada Boost model can use various other models such as Decision Trees, Naive Bayes, and others. It uses the other models and creates smaller, weak models on the training data. After it makes weak models, these models are used on new incoming testing data. The weak models, for a classification problem such as this, vote on what the output label is, thus boosting the power all the weaker models into one powerful model. These weaker models are also dynamically weighted during the training phase, so that bad weak models contribute less, and good weak models contribute more. If a weak model gives the incorrect label during the training phase, to any sample, that weak model's voting weight is decreased. While a weak model that gives a correct label during the training phase, to any sample, voting weight is increased.</p>
+<p>When each weak learner is actually built, it will prioritize certain data points the previous weak learner got wrong. Each weak learner is trying to correct for errors that the previous one made.</p>
 
 </div>
 </div>
